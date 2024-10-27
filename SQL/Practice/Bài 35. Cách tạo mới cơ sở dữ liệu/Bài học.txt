@@ -1,0 +1,23 @@
+<-- Cách tạo cơ sở dữ liệu trong SQL SERVER -->
+
+--Cú pháp
+
+CREATE DATABASE <database_name>;
+
+Ví dụ 1:
+CREATE DATABASE mydatabase;
+
+------
+CREATE DATABASE employees
+ON
+(NAME = 'employees_data',
+    FILENAME = 'C:\data\employees_data.mdf',
+    SIZE = 10MB,
+    MAXSIZE = 100MB,
+    FILEGROWTH = 5MB)
+LOG ON
+(NAME = 'employees_log',
+    FILENAME = 'C:\data\employees_log.ldf',
+    SIZE = 5MB,
+    MAXSIZE = 50MB,
+    FILEGROWTH = 1MB;)
