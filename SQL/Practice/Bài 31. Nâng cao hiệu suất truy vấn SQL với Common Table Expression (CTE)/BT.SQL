@@ -6,9 +6,10 @@
 
 -- 3.Sử dụng CTE tính tổng doanh số bán hàng theo năm từ bảng "Orders" và "Order Details"
 
+
 --1
 WITH DOANHSO AS (
-	SELECT SUM(Quantity * UnitPrice) AS "Tổng tiền",
+	SELECT SUM(Quantity * (UnitPrice*(1 - Discount))) AS "Tổng tiền",
 	ProductID
 	FROM [Order Details] 
 	GROUP BY ProductID
@@ -48,13 +49,12 @@ WITH EACHYEAR AS
 ),
 DOANHTHU AS 
 (
-	SELECT SUM(od.Quantity * od.UnitPrice) AS "Tổng tiền",
+	SELECT SUM(od.Quantity * (od.UnitPrice *(1- od.Discount))) AS "Tổng tiền",
 	N.NĂM
 	FROM [Order Details] od
 	JOIN EACHYEAR N ON od.OrderID = N.OrderID
 	GROUP BY N.NĂM
 )
-
 SELECT D.NĂM,
 	D.[Tổng tiền]
 FROM DOANHTHU D
