@@ -26,14 +26,6 @@ FUNCTION_NAME(expression) OVER (
 
 
 --Bổ sung thêm vào database để thực hiện các truy vấn tiếp theo
-CREATE TABLE [sinh_vien] (
-    [ma_sinh_vien] INT PRIMARY KEY,
-    [ho_ten] NVARCHAR(255),
-    [diem_trung_binh] DECIMAL(3, 2),
-    [ma_lop_hoc] INT
-);
-
--- Chèn 20 dòng dữ liệu thực tế vào bảng
 -- Tạo bảng "sinh_vien"
 CREATE TABLE [sinh_vien] (
     [ma_sinh_vien] INT PRIMARY KEY,
