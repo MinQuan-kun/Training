@@ -57,3 +57,44 @@ VALUES
     (18, N'Nguyễn Thị T', 3.75, 103),
     (19, N'Nguyễn Văn U', 3.93, 102),
     (20, N'Nguyễn Thị V', 3.67, 101);
+
+
+--Danh sách các Functions
+
+*ROW_NUMBER(): Gán một số thựu tự (row number) duy nhất cho mỗi dòng trong window,
+bắt đầu từ 1.
+
+*RANK(): Xếp hạng các dòng dựa trên giá trị của cột được sắp xếp. Giá trị trụng lặp được
+xếp hạng giống nhau và bỏ qua các số xếp hạng sau.
+
+*DENSE_RANK(): Tương tự như RANK(), nhưng giá trị trùng lặp có cùng một số xếp hạng
+và không bị bỏ qua các số xếp hạng sau.
+
+*NTILE(n): Chia dữ liệu thành n phần bằng nhau và gán một số xác định cho mỗi dòng để
+xác định phần nào của dữ liệu dòng đó thuộc về.
+
+*LAG(column, n): Trả về giá trị của cột cho dòng trước đó (hoặc dòng thứ n trước đó ) trong
+window.
+
+*LEAD(column, n): Trả về giá trị của cột cho dòng sau đó (hoặc dòng thứ n sau đó) trong
+window.
+
+*FIRST_VALUE(column): Trả về giá trị đầu tiên của cột trong window.
+
+*LAST_VALUE(column): Trả về giá trị cuối cùng của cột trong window.
+
+*SUM(column): Tính tổng giá trị của cột trong window.
+
+*AVG(column): Tính giá trị trung bình của cột trong window.
+
+*COUNT(column): Đếm số lượng dòng có giá trị không null của cột trong window.
+
+*MIN(column): Tìm giá trị nhỏ nhất của cột trong window.
+
+*MAX(column): Tìm giá trị lớn nhất của cột trong window.
+
+*PERCENT_RANK(): Xếp hạng dòng dựa trên phần trăm vị trí của dòng trong window.
+Trả về giá trị từ 0 đến 1.
+
+*CUME_DIST(): Xác định xem dòng đó thuộc phần bao nhiêu phần trăm của dữ liệu trong 
+window. Trả về giá trị từ 0 đến 1.
