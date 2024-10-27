@@ -23,7 +23,9 @@ FUNCTION_NAME(expression) OVER (
     [ROWS BETWEEN frame_specification]
 )
 
---Bổ sung thêm vào database
+
+
+--Bổ sung thêm vào database để thực hiện các truy vấn tiếp theo
 CREATE TABLE [sinh_vien] (
     [ma_sinh_vien] INT PRIMARY KEY,
     [ho_ten] NVARCHAR(255),

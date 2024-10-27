@@ -44,4 +44,4 @@ FULL JOIN table2
 ON table1.column_name = table_name.column_name
 Trả về tất cả các dòng đúng với 1 trong các bảng
 
---Bổ sung thêm vào bảng Customer , Orders, Products 1 sản phẩm, người dùng bất kì
+--Bổ sung thêm vào bảng Customer , Orders, Products 1 sản phẩm, người dùng bất kì để thực hiện truy vấn nha
