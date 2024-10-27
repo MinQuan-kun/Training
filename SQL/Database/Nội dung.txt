@@ -306,3 +306,20 @@ WHERE (5)
 GROUP BY (6)
 HAVING (7)
 ORDER BY (10)
+
+<-- Common Table Expression (CTE) -->
+Được sủ dụng để tạo bảng tạm thời và sử dụng nó trong các truy vấn sau đó.
+Giúp làm cho cấu truy vấn trở nên dễ độc và dễ quản lý hơn
+
+WITH tên_CTE (coojt1, coot2,...) AS (
+    --Truy vấn để định nghĩa CTE
+)
+
+<-- Cấu trúc của CTE -->
+"WITH" là từ khóa bắt buộc để bắt đầu định nghĩa CTE.
+"Tên_CTE" là tên bạn muốn đặt cho CTE, đây là tên mà bạn sẽ sử dụng để tham chiếu
+(cột1, cột2,.. ) là danh sách các cột bạn muốn định nghĩa cho CTE.Có thể không cần
+định danh cột nếu bạn muốn CTE chứa tất cả các cột từ kết quả của truy vấn.
+"--Truy vấn để định nghĩa CTE" là phần trong dấu ngoặc đơn, nơi bạn đặt truy vấn
+SQL đẻ xác định dữ liệu cho CTE. Truy vấn này có thể bao gồm các câu lệnh SELECT,
+FROM, WHERE, GROUP BY, HAVING và ORDER BY tùy theo nhu cầu
