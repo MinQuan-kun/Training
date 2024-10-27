@@ -15,7 +15,7 @@ FROM table_name;
 
 <-- Lấy ra các dữ liệu khác nhau của cột trong bảng -->
 Câu lệnh SELECT DISTINCT
-SELECT DISTINCt colum1, colum2,...
+SELECT DISTINCT colum1, colum2,...
 FROM table_name;
 
 <-- Lấy ra giới hạn số lượng dòng (hoặc %) được trả về khi được gọi lệnh SELECT
@@ -297,3 +297,12 @@ UPDATE, INSERT, hoặc DELETE khác.
 Subquery hoạt động như một bảng ảo tạm thời, nó được Sử
 dụng để trích xuất thông tin từ các bảng hoặc tập dữ liệu khác
 trong cùng một câu truy vấn.
+
+<-- Thứ tự thực thi câu lệnh trong SQL -->
+SELECT DISTINCT (9) TOP (11), , (8)
+FROM (1)
+FULL/L/R (4) OUTER JOIN (2) ON (3)
+WHERE (5)
+GROUP BY (6)
+HAVING (7)
+ORDER BY (10)
