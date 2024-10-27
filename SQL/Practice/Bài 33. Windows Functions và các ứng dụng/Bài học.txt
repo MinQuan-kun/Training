@@ -1,0 +1,14 @@
+<--Windows Functions -->
+Tính toán trên một tập dữ liệu con (window)
+của bảng dữ liệu
+
+--Giới thiệu
+Windows Functions (hoặc còn gọi là Windowed Functions) là một tính năng mạnh mẽ
+trong SQL Server cho phép chúng ta thực hiện tính toán trên một tập dữ liệu con (window)
+của bảng dữ liệu, thay vì trên toàn bộ bảng.
+
+--Các loại Window Functions
++Aggregate Functions: Được sử dụng để thực hiện tính toán tổng hợp như SUM, AVG, COUNT
+trên một window
++Ranking Functions: Được sử dụng để xếp hạng các dòng dữ liệu trong một window, ví dụ:
+ROW_NUMBER, RANK, DENSE_RANK

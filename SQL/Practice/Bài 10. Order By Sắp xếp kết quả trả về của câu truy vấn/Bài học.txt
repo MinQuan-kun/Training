@@ -1,0 +1,7 @@
+<-- ORDER BY -->
+SELECT colum1, colum2, ..
+FROM table_name
+ORDER BY colum1, colum2, ... ASC|DESC;
+
+ASC: sắp xếp tăng dần(mặc định nếu không ghi)
+DESC: sắp xết giảm dần

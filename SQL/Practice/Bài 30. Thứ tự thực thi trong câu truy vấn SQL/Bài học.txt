@@ -1,0 +1,8 @@
+<-- Thứ tự thực thi câu lệnh trong SQL -->
+SELECT DISTINCT (9) TOP (11), , (8)
+FROM (1)
+FULL/L/R (4) OUTER JOIN (2) ON (3)
+WHERE (5)
+GROUP BY (6)
+HAVING (7)
+ORDER BY (10)

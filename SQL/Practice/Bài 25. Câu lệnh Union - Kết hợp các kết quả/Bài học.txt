@@ -1,0 +1,12 @@
+<-- UNION -->
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2
+
+Được sử dụng để kết hợp tập kết quả của 2 hoặc nhiều câu lệnh
+Mỗi câu lệnh bên trong phải có cùng só lượng cột
+Các cột cũng phải có kiểu dữ liệu tương tự
+Các cột trong mỗi câu lệnh cũng phải theo cùng thứ tự
+
+<-- UNION ALL -->
+CHO PHÉP CÁC GIÁ TRỊ BỊ LẶP LẠI

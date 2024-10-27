@@ -1,0 +1,10 @@
+<--Mệnh đề WHERE -->
+SELECT colum1, colum2
+FROM table_name
+WHERE condition
+
+Nếu tìm kiếm từ khóa có chữ thì
+WHERE colum1 = 'name'
+
+Trường hợp có dấu thì
+WHERE colum1 = N'name'

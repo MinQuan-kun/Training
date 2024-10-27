@@ -1,0 +1,4 @@
+<-- Lấy ra các dữ liệu khác nhau của cột trong bảng -->
+Câu lệnh SELECT DISTINCT
+SELECT DISTINCT column1, column2,...
+FROM table_name;

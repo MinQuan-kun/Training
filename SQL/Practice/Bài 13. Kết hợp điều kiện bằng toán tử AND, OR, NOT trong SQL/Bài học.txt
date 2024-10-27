@@ -1,0 +1,18 @@
+<-- AND - VÀ -->
+SELECT colum1, colum2,...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3
+
+Hiện thị một bản ghi nếu tất cả các điều kiện được phân tách bằng AND đều có giá trị TRUE
+
+<-- OR - HOẶC -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE condition1 OR condition2 OR condition3
+
+Hiện thị một bản ghi nếu có ít nhất 1 điều kiện được phân tách bằng OR có giá trị TRUE
+
+<-- NOT - PHỦ ĐỊNH -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE NOT condition1;

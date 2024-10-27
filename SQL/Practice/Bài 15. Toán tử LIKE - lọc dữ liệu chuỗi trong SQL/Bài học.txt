@@ -1,0 +1,8 @@
+<-- TOÁN TỬ LIKE -->
+SELECT colum1, colum2,..
+FROM table_name
+WHERE columN LIKE pattern;
+
+Có hai ký tự đại diện thường được sử dụng cùng với LIKE:
+Dấu phần trăm (%) đại diện cho không, một hoặc nhiều ký thực
+Dấu gạch dưới (_) đại diện cho một ký tự đơn

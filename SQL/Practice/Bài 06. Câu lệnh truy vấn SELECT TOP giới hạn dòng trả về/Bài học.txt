@@ -1,0 +1,8 @@
+<-- Lấy ra giới hạn số lượng dòng (hoặc %) được trả về khi được gọi lệnh SELECT
+Câu lệnh SELECT TOP number | percent column_name(s)
+FROM table_name
+WHERE condition;
+
+<-- Lấy nội dung riêng biệt nhưng chỉ lấy số lượng có hạn -->
+SELECT DISTINCT TOP n colum2
+FROM table_name

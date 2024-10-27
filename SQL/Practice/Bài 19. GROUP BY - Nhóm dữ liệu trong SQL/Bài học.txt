@@ -1,0 +1,9 @@
+<-- GROUP BY -- >
+SELECT column_name
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s)
+
+Dùng để nhóm các dòng dữ liệu có cùng giá trị
+Thường được dùng với các hàm COUNT(), MAX(), MIN(), SUM(), AVG()

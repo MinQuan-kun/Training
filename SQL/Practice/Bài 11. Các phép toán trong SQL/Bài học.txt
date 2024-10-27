@@ -1,0 +1,7 @@
+<-- Các phép toán -->
+Cấu trúc chung
+SELECT colum1 [Phép toán] colum2,..
+FROM table_name
+
+[Phép toán]
+Cộng(+), trừ(-), nhân(*), chia(/), chia lấy dư(%)

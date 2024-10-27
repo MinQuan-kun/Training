@@ -1,0 +1,11 @@
+<-- HAVING -->
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+Lọc dữ liệu sau GROUP BY
+Khác với WHERE Khi lọc điều kiện không sử dụng được các hàm như SUM(),COUNT()
+Thì HAVING sinh ra để xử lý vấn đề đó

@@ -1,0 +1,23 @@
+Các bài tập hay nội dung học tớ học trên kênh TITV
+Link kênh:https://www.youtube.com/@TITVvn
+Link tải database: https://github.com/lenhattung/sqlserver
+Tải Northwind Database và sử dụng SQL server để thực hiện các truy vấn
+
+<--Phần nội dung học-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

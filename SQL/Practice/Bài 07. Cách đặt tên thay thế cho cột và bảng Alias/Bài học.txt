@@ -1,0 +1,11 @@
+Đặt tên thay thế cho các cột
+Giúp cho việc đọc và hiểu câu lệnh dễ dàng hơn
+<--ALIAS các cột -->
+SELECT column_name AS alias_name
+FROM table_name
+
+Đặt tên thay thế cho các bảng
+Giúp cho việc đọc và hiểu các câu lệnh SQL dễ dàng hơn
+<--ALIAS Tên bảng -->
+SELECT column_name(s)
+FROM table_name AS alias_name

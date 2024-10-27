@@ -1,0 +1,8 @@
+Giới thiệu về SUB QUERY
+Subquery (câu truy vấn con) trong SQL là một truy vấn
+SELECT được viết bên trong một truy vấn SELECT,
+UPDATE, INSERT, hoặc DELETE khác.
+
+Subquery hoạt động như một bảng ảo tạm thời, nó được Sử
+dụng để trích xuất thông tin từ các bảng hoặc tập dữ liệu khác
+trong cùng một câu truy vấn.

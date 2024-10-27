@@ -1,0 +1,7 @@
+Câu lệnh SELECT
+SELECT column1, column2,...
+FROM table_name;
+
+<-- Lấy ra tất cả dữ liệu của 1 bảng -->
+SELECT *
+FROM table_name;

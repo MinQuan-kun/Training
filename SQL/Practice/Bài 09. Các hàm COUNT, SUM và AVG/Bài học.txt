@@ -1,0 +1,22 @@
+<-- Đếm số lương - COUNT() -->
+SELECT COUNT(column_name)
+FROM table_name
+
+Đếm số lượng dữ liệu (khác NULL) trong cột 
+Sử dụng COUNT(*) khi muốn đếm số lượng bản ghi
+
+
+<-- Đếm số lương - SUM() -->
+SELECT SUM(column_name)
+FROM table_name
+
+Tính tổng giá trị của một cột
+Nếu bất kỳ giá trị trong cột là NULL, Kết quả của hàm SUM sẽ là NULL
+
+<-- Đếm số lương -AVG() -->
+SELECT AVG(column_name)
+FROM table_name
+
+Tính giá trị trung bình cho một cột
+Nếu tất cả các giá trị trong cột là NULL, kết quả cảu hàm AVG sẽ là NULL
+Nếu chỉ một và giá trị là NULL, AVG sẽ bỏ qua các giá trị NULL và tính trung bình cho các giá trị khác
