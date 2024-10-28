@@ -1,0 +1,71 @@
+<-- CÁCH TẠO, THAY ĐỔI VÀ XÓA TABLE TRONG SQL SERVER -->
+Trong đó:
+*Tên bảng: Tên của bảng mới được tạo
+*Tên cột: Tên của cột trong bảng.
+*Kiểu dữ liệu: Kiểu dữ liệu của cột.
+*Khóa chính: Cột được chọn làm khóa chính của bảng.
+*Khóa ngoại: Cột tham đến khóa chính của một bảng khác.
+*Số lượng ký tự: Số lượng ký tự tối đa cột.
+*Null: Giá trị của cột có thể là null hay không.
+*Kiểu ràng buộc: Ràng buộc áp dụng cho cột.
+
+CREATE TABLE [tên bảng]
+(
+    [tên cột] [kiểu dữ liệu] [khóa chính] [khóa ngoại] [số lượng ký tự] [null] [kiểu ràng buộc]
+    [tên cột] [kiểu dữ liệu] [khóa chính] [khóa ngoại] [số lượng ký tự] [null] [kiểu ràng buộc]
+    ...
+)
+
+--Một số lưu ý khi tạo TABLE
+
+*Tên bảng phải bắt đầu bằng một ký tự chữ cái và không được chứa cấc ký tự đặc biệt.
+
+*Tên cột phải bắt đầu bằng một ký tự chữ cái hoặc số và không được chứa các ký tự đặc biệt.
+
+*Kiểu dữ liệu của cột phải được xác định rõ ràng.
+
+*Khóa chính của bảng phải là duy nhất.
+
+*Khóa ngoại của bảng phải tham chiếu đến khóa chính của một bảng khác.
+
+<-- CONSTRAINTS - Các lệnh bổ sung khi tạo bảng -->
+
+*IDENTITY: Tạo cột tự tăng.
+
+*IDENTITY(seed, increment): Tạo cột tự tăng với giá trị seed và increment.
+
+*DEFAULT: Thiết lập giá trị mặc định cho cột
+
+*CHECK: Thiết lập ràng buộc kiểm tra cho cột.
+
+*UNIQUE: Thiết lập ràng buộc duy nhất cho cột.
+
+<-- Cú pháp thay đổi cấu trúc TABLE -->
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype
+
+ALTER TABLE [tên bảng]
+[thêm | sửa đổi | xóa] [tên cột]
+[kiểu] [khóa chính] [khóa ngoại] [số lượng ký tự] [null] [kiểu ràng buộc]
+
+<-- Cú pháp xóa TABLE -->
+
+*Cú pháp xóa dữ liệu trong Table - Cú pháp này sẽ xóa tất cả dữ liệu trong bảng, nhưng
+không xóa cấu trúc của bảng.
+
+TRUNCATE TABLE [tên bảng];
+
+*Cú pháp xóa Table - Cú pháp này sẽ xóa hoàn toàn bảng, bao gồm cả cấu trúc và
+dữ liệu
+
+DROP TABLE [tên bảng];
