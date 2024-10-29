@@ -1,0 +1,39 @@
+<-- DELETE CÂU LỆNH XÓA DỮ LIỆU -->
+
+--Cú pháp
+
+DELETE FROM table_name WHERE condition;
+
+--Lưu ý
+
+Sử dụng SELECT INTO để tạo ra bảng tạm thời trước khi thực hành câu lệnh DELETE
+
+
+--Câu hỏi:
+DELETE FROM khác gì với TRUNCATE
+1.Phạm vi xóa dữ liệu:
+
+DELETE: Xóa từng dòng một cách có điều kiện hoặc xóa toàn bộ bảng nếu không có điều kiện nào. Bạn có thể chỉ định câu WHERE để xóa các hàng cụ thể.
+TRUNCATE: Xóa toàn bộ dữ liệu trong bảng mà không có điều kiện. Không thể dùng câu WHERE với TRUNCATE.
+2.Tốc độ thực hiện:
+
+DELETE: Chậm hơn vì xóa từng dòng một và ghi log riêng cho từng dòng bị xóa.
+TRUNCATE: Nhanh hơn do nó không ghi log từng dòng mà chỉ ghi log cấu trúc xóa của bảng.
+3.Khả năng hoàn tác (ROLLBACK):
+
+DELETE: Có thể hoàn tác nếu thực hiện trong một transaction (BEGIN TRANSACTION), vì DELETE ghi log chi tiết từng dòng xóa.
+TRUNCATE: Không thể hoàn tác nếu không có hỗ trợ từ hệ thống hoặc không có các cài đặt bổ sung. Một số hệ quản trị cơ sở dữ liệu cho phép rollback nhưng không phải tất cả.
+4.Sự ảnh hưởng đến các ràng buộc:
+
+DELETE: Kích hoạt các trigger trong bảng, nên có thể phù hợp khi cần xử lý phức tạp với dữ liệu bị xóa.
+TRUNCATE: Không kích hoạt trigger.
+5.Đếm lại khóa chính:
+
+DELETE: Không thay đổi số đếm của khóa chính (nếu có). Khi thêm bản ghi mới, khóa chính sẽ tiếp tục từ giá trị hiện tại.
+TRUNCATE: Đặt lại số đếm của khóa chính về giá trị ban đầu (nếu dùng Auto Increment).
+
+-- Xóa các bản ghi có tuổi dưới 18
+DELETE FROM Employees WHERE Age < 18;
+
+-- Xóa toàn bộ dữ liệu và đặt lại số đếm
+TRUNCATE TABLE Employees;
