@@ -1,0 +1,36 @@
+<-- Lưu ý về kiểu dữ liệu trong SQL SERVER -->
+
+--Khái niệm về kiểu dữ liệu
+*Kiểu dữ liệu là một thuộc tính của một cột trong bảng, xác định
+loại dữ liệu mà cột đó có thể lưu trữ. Kiểu dữ liệu xác định kích thước,
+phạm vi và các phép toán có thể được thực hiện trên dữ liệu.
+
+--Các kiểu dữ liệu
+_Kiểu dữ liệu số: Lưu trữ các số nguyên, số thực và số thập phân
+_Kiểu dữ liệu chuỗi: Lưu trữ văn bản.
+_Kiểu dữ liệu ngày và thời gian: Lưu trữ ngày, giờ và ngày giờ.
+_Kiểu dữ liệu bit: Lưu trữ các giá trị logic, chẳng hạn là TRUE hoặc FALSE
+
+Xem chi tiết: https://www.w3schools.com/sql/sql_datatypes.asp
+
+<--Sự khác biệt giữa char và varchar-->
+*Char là kiểu dữu liệu chuỗi có độ dài cố định. Điều này có nghĩa là tất cả các giá trị
+được lưu trữ trong cột char sẽ có cùng độ dài. Độ dài của cột char được xác định bởi
+giá trị n trong cú pháp CHAR(n)
+
+*VARCHAR là kiểu dữ liệu chuỗi có độ dài biến đổi. Điều này có nghĩa là các giá trị được
+lưu trữ trong cột varchar có thể có độ dài khác nhau. Độ dài tối đa của cột varchar. Độ dài
+tối đa của cột varchar được xác định bởi giá trị n trong cú pháp VARCHAR(n)
+
+<--Tradeoff - đánh đổi -->
+*Đánh đổi thứ nhất: VARCHAR lưu chuỗi theo độ dài của chính nó (varialbe-length),
+chứ không thêm các khoảng trắng vào cuối như CHAR (fixed-length). Vì vậy đối với
+những cột thường xuyên có sự khách nhau giữa độ dài của các dòng trong bảng, thì lưu
+trữ theo kiểu VARCHAR sẽ tối ưu hơn, tốn ít dung lượng lữu trữ hơn.
+
+*Đánh đổi thứ hai: Nhờ việc fix cứng chiều dài của mình, các thao tác chuỗi với kiểu dữ 
+liệu CHAR sẽ nhanh hơn VARCHAR, vì các thao tác với chuỗi sẽ phải có thêm việc
+check length nếu bạn sử dụng VARCHAR. Ví dụ với việc đánh index, trung bình việc
+tìm kiếm dữ liệu với index của cột CHAR sẽ nhanh hơn 20% so với cột VARCHAR.
+
+
