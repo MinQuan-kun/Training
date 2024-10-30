@@ -1,0 +1,34 @@
+<-- T-SQL (Transact-SQL) Ngôn ngữ truy vấn mở rộng của SQL -->
+
+--T-SQL là gì ?
+_T-SQL (Transact-SQL) là cú pháp ngôn ngữ lập trình mở rộng của ngôn ngữ SQL gồm 
+có các tính năng được Sybase và Microsoft bổ sung cho SQL. Chẳng hạn như kiểm soát
+giao dịch, xử lý lỗi và các biến được khai báo.
+
+Ví dụ
+--Khai báo biến
+DECLARE @CustomerName NVARCHAR(50)
+DECLARE @OrderTotal MONEY
+
+--Gán giá trị cho biến
+SET @CustomerName = 'John Doe'
+SET @OrderTotal = 100.50
+
+--Sử dụng biến trong truy vấn
+SELECT *
+FROM Orders
+WHERE CustomerName = @CustomerName
+
+--Sử dụng biến trong Stored Procedure
+CREATE PROCEDURE GetOrdersByTotal
+    @MinTotal MONEY
+AS 
+BEGIN
+    SELECT *
+    FROM Orders
+    WHERE OrderTotal >= @MinTotal
+END
+
+--Gọi Stored Procedure và truyền biến
+EXEC GetOrdersByTotal @MinTotal = @OrderTotal
+
