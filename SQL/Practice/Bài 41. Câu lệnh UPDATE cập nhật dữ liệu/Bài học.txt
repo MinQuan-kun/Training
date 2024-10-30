@@ -1,0 +1,6 @@
+<-- UPDATE Cập nhật dữ liệu -->
+
+--Cú pháp
+UPDATE table_name
+SET column1 = value1, column2 = value2,....
+WHERE condition
