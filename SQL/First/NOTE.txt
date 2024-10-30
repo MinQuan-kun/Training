@@ -3,3 +3,6 @@ Link kênh:https://www.youtube.com/@TITVvn
 Link tải database: https://github.com/lenhattung/sqlserver
 hoặc down 2 file NORTHWND.MDF và NORTHWND_Logldf ở đây về rồi thực hiện
 Dùng bộ dữ liệu Northwind Database và sử dụng SQL server để thực hiện các truy vấn
+
+Bộ dữ liệu AdventureWorks2022 dùng để thực hành cho bài 42
+Link hướng dẫn nếu xảy ra lỗi: https://www.youtube.com/watch?v=F_F5COg5gNU
