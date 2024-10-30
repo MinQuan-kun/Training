@@ -5,4 +5,5 @@ hoặc down 2 file NORTHWND.MDF và NORTHWND_Logldf ở đây về rồi thực 
 Dùng bộ dữ liệu Northwind Database và sử dụng SQL server để thực hiện các truy vấn
 
 Bộ dữ liệu AdventureWorks2022 dùng để thực hành cho bài 42
+Link tải:https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak
 Link hướng dẫn nếu xảy ra lỗi: https://www.youtube.com/watch?v=F_F5COg5gNU
