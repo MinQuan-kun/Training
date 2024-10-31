@@ -7,3 +7,7 @@ Dùng bộ dữ liệu Northwind Database và sử dụng SQL server để thự
 Bộ dữ liệu AdventureWorks2022 dùng để thực hành cho bài 42
 Link tải:https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2022.bak
 Link hướng dẫn nếu xảy ra lỗi: https://www.youtube.com/watch?v=F_F5COg5gNU
+
+--Chú ý
+Riêng các bài 1, 2, 3, 47 là các bài về tạo dựng và không có liên quan đến kiến thức về các lệnh truy
+vấn nên sẽ không đưa vào đây!
