@@ -1,0 +1,56 @@
+<-- Stored Procedures trong SQL Server -->
+
+--Stored Procedures là gì?
+    _Stored procedure là tập hợp một hoặc nhiều câu lệnh T-SQL thành một
+nhóm đơn vị xử lý logic và được lưu trữ trên Database Server.
+
+    _Khi một câu lệnh gọi chạy stored procedure lần đầu tiên thì SQL Server
+sẽ chạy nó và lưu trữ vào bộ nhớ đệm, gọi là plan cache, những lần tiếp theo
+SQL Server sẽ sử dụng lại plan cache nên sẽ cho tốc độ xử lý tối ưu
+
+    _Stored procedure rất tiện lợi cho người quản trị database(DBA), nó giúp
+DBA tạo ra những nhóm câu lệnh và gửi đến một bộ phận khác mà họ sẽ không cần 
+quan tâm đến nội dung bên trong stored procedure có gì họ chỉ quan tâm đến 
+tham số đầu vào và đầu ra.
+
+--Cú pháp
+CREATE PROCEDURE [database_name].[schema_name].[procedure_name]
+(
+    [parameter_1] [datatype] [, parameter_2] [datatype] ...
+)
+AS
+BEGIN
+    [stataments]
+END
+
+*Ưu điểm
+    _Hiệu suất tốt
+    _Các cuộc gọi thủ tục nhanh chóng và hiệu quả vì các thủ tục lưu trữ được biên dịch một lần và được lưu trữ ở dạng thực thi
+    _Mã thực thi được tự động lưu trữ, do đó làm giảm yêu cầu bộ nhớ
+    _Khi thực thi một câu lệnh SQL thì SQL Server phải kiểm tra permission xem user gửi câu lệnh đó có được phép thực hiện câu 
+lệnh hay không đồng thời kiểm tra cú pháp rồi mới tạo ra một execute plan và thực thi. Nếu có nhiều câu lệnh như vậy gửi qua
+network có thể làm giảm đi tốc độ làm việc của Server
+    _SQL Server sẽ làm việc hiệu quả hơn nếu dùng stored procedure vì người gửi chỉ gửi một yêu cầu lệnh đơn giản và SQL Server chỉ kiểm
+tra một lần sau đó tạo ra một execute plan và thực thi. Nếu stored procedure được gọi nghiều lần thì execute plan có thể được sử
+dụng lại nên sẽ làm việc nhanh hơn. Ngoài ra cú pháp của các câu lệnh SQL đã được SQL Server kiểm tra trước khi save nên nó không cần
+kiểm tra lại khi thực thi.
+    _Năng suất cao hơn: Vì khả năng tái sử dụng mà không cần phải viết lại các câu lệnh SQL lặp đi lặp lại nên do 
+đó năng suất tạo ra cao hơn.
+    _Khả năng mở rộng và bảo trì: Các thủ tục lưu trữ tăng khả năng mở rộng bằng cách cách ly xử lý ứng dụng trên server.
+Nếu cần bất kỳ thay đổi nào, bạn chỉ cần thay đổi thủ tục lữu mà không cần chạm vào mã ứng dụng.
+    _Bảo mật tốt: Giả sử chúng ta muốn giới hạn việc truy xuất dữ liệu trực tiếp của một user nào đó vào một số tables, 
+ta có thể viết một stored procedure để truy xuất dữ liệu và chỉ cho phép user đó được sử dụng stored procedure đã viết sẵn 
+mà thôi chứ không thể "dùng" đến các tables đó một cách trực tiếp. Ngoài ra stored procedure có thể được enerypt (mã hóa) để 
+tăng cường tính bảo mật
+
+*Nhược điểm
+    _Khả năng kiểm tra: logic nghiệp vụ được gói gọn trong các thủ tục lưu trữ nên rất khó kiểm tra(nếu được kiểm tra). Việc viết các kiểm 
+thử cho bất kỳ logic nghiệp vụ nào trong một thủ tục lưu trữ là không thể, bởi vì không có cách nào để phản ảnh rõ ràng logic nghiệp vụ.
+    _Khả năng gỡ lỗi: tùy thuộc vào các hệ quản trị cơ sở dữ liệu, việc gỡ lỗi các thủ tục sẽ không thực hiện được hoặc cực kỳ khó hiểu. Chẳng 
+hạn như SQL Server có khả năng sửa lỗi và những hệ quản trị cơ sở dữ liệu khách thì không có. Điều này rất khó khăn cho lập trình viên
+(trên nền tảng phát triển doanh nghiệp điển hình)
+    _Sợ thay đổi: Một trong những nhược điểm lớn nhất của các thủ tục lưu trữ là cực kỳ khó để biết phần nào của hệ thống sử dụng chúng và 
+phần nào không. Đặc biệt là nếu phần mềm được chia thành nhiều ứng dụng thì thường không thể tìm thấy tất cả các tài liệu tham khảo trong một 
+lần(hoặc hoàn toàn nếu nhà phát triền không đọc quyền truy cập vào tất cả các dự án) và do đó khó có thể tự tin thiết lập một cách chắc chắn 
+thay đổi sẽ ảnh hưởng đến hệ thống tổng thể. Kết quả là các thủ tục được lưu trữ có nguy cơ rất lớn trong việc đưa ra các thay đổi vi phạm và 
+các nhóm phát triển thường né tránh thực hiện bất kỳ thay đổi nào. Đôi khi điều này có thể dẫn đến làm tê liệt những đổi mới công nghệ mới.
