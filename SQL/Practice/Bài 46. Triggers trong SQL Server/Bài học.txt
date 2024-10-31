@@ -1,0 +1,70 @@
+<-- Trigger trong SQL -->
+
+--Trigger là gì ?
+_Trigger là một đoạn thủ tục SQL được thực thi tự động khi một sự kiện cụ thể xảy ra trên
+một bảng (table) hoặc đang xem (view)
+
+--Các sự kiện có thể kích hoạt Trigger bao gồm
++ Insert
++ Update 
++ Delete 
++ DDL (Data Definition Language)
++ DML (Data Manipulation Language)
+
+-- Các loại Trigger 
++ Trigger Before: thực thi trước khi sự kiện xảy ra
++ Trigger After : Thực thi sau khi sự kiện xảy ra
+
+--Cú pháp 
+
+CREATE TRIGGER trigger_name
+ON table_name
+FOR {INSERT | UPDATE | DELETE }
+AS 
+BEGIN
+    -- Code thực thi khi sự kiện xảy ra
+END 
+
+-- Các lớp trong Trigger trong SQL Server
+    _DDL Trigger: DML là viết tắt của cụm từ Data Modification Language. DML trigger là 
+một loại trigger phổ biến và được sử dụng nhiều nhất hiện nay. Lúc này, việc kích 
+hoạt chính là câu lệnh sửa đổi dữ liệu. Đó có thể là một câu lệnh chèn vào bảng, cập nhật
+bảng hoặc xóa bỏ bảng
+
+--Lưu ý
+    _AFTER: Trigger "After" (Hoặc "AFTER INSERT" , "AFTER UPDATE", "AFTER DELETE") được 
+kích hoạt sau khi Lệnh INSERT, UPDATE hoặc DELETE đã hoàn thành và dữ liệu đã được 
+thay đổi trong cơ sở dữ liệu. Trigger "AFTER" thường được sử dụng để thực hiện các 
+hành động sau khi dữ liệu đã được thay đổi. Trigger "AFTER" có thể truy cập vào dữ 
+liệu đã được cập nhật và sử dụng nó trong các hành động khác
+    _FOR: Trigger "FOR" (Hoặc "FOR INSERT", "FOR UPDATE", "FOR DELETE") thường được 
+sử dụng để kiểm tra hoặc can thiệp vào dữ liệu trước khi lệnh INSERT, DELETE, UPDATE
+được thực hiện hoặc để kiểm tra và thay đổi dữ liệu trước khi nó được cập nhật. Trigger
+"FOR" thực hiện hành động trước khi dữ liệu thay đổi, và nó có khả năng ảnh hưởng đến 
+dữ liệu trước khi nó được ghi vào cơ sở dữ liệu. Trigger "FOR" có thể được sử dụng để kiểm
+tra và cản trở việc cập nhật dữ liệu nếu cần.
+    _"INSTEAD OF" là một loại khác của Trigger trong SQL Server. Trigger "INSTEAD OF" được
+sử dụng để thay đổi hoặc kiểm tra dữ liệu trước khi một lệnh DML (Data Manipulation Language)
+như INSERT, UPDATE, DELETE được thực hiện trên một view hoặc một bảng. Nó thay thế lệnh DML
+gốc bằng hành động bạn xác định trong trigger.
+    _Cụ thể trigger "INSTEAD OF" Cho phép bạn thực hiện các hành động tùy chỉnh thay vì thực 
+hiện lệnh DML gốc. Điều này có thể hữu ích khi bạn muốn kiểm tra và can thiệp vào dữ liệu trước
+khi nó được ghi vào cơ sở dữ liệu hoặc khi bạn muốn thực hiện hành động không phải là lệnh DML trực tiếp.
+    _Ví dụ, nếu bạn có một view hoặc một bảng, và bạn muốn áp dụng quy tắc kiểm tra trước khi cho phép 
+các lệnh INSERT hoặc UPDATE, bạn có thể sử dụng trigger "INSTEAD OF" để kiểm tra và thay đổi dữ liệu 
+trước khi nó được ghi vào cơ sở dữ liệu.
+
+--Ưu điểm 
+    _Trigger có thể bắt lỗi business logic ở mức CSDL.
+    _Có thể dùng trigger là một cách khác để thay thế việc thực hiện những 
+công việc hẹn giờ theo lịch 
+    _Trigger rất hiệu quả khi được sử dụng để kiếm soát những thay đổi của dữ 
+liệu trong bảng     
+
+--Nhược điểm
+    _Trigger chỉ là một phần mở rộng của việc kiểm tra tính hợp lệ của dữ 
+liệu chứ không thay thế được hoàn toàn công việc này.
+    _Trigger hoạt động ngầm ở trong csdl, không hiển thị ở tầng giao diện.
+Do đó, khó chỉ ra được điều gì xảy ra ở tầng csdl.
+    _Trigger thực hiện các update lên bảng dữ liệu vì thế nó làm tăng lượng
+công việc lên csdl và làm cho hệ thống chạy chậm lại.
