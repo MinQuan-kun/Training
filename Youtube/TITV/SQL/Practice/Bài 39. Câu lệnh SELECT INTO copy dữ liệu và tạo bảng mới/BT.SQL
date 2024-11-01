@@ -8,7 +8,7 @@
 SELECT *
 INTO CustomersLondon
 FROM Customers
-WHERE 
+WHERE DIACHI = 'London'
 
 --2
 WITH TONGDON AS(
