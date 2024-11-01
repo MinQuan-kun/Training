@@ -55,7 +55,7 @@ BEGIN
             SET LUONG = 1500
             WHERE MAGV = @GV_ID
         END
-        FETCH NEXT FROM C_Tuoi INTO @GV_ID, @Tuoi
+    FETCH NEXT FROM C_Tuoi INTO @GV_ID, @Tuoi
     END
     CLOSE C_Tuoi
     DEALLOCATE C_Tuoi
