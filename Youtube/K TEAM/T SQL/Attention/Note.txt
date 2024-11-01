@@ -4,4 +4,4 @@ Vì vậy trước khi học T SQL cần phải học các câu lệnh cơ bản
 Các bài tập và bài học phần này tớ học trên kênh K team 
 Link khóa học: https://www.youtube.com/watch?v=2fanjSYVElY&list=PL33lvabfss1xnFpWQF6YH11kMTS1HmLsw&index=1
 Và phần này sẽ bắt đầu từ bài 25
-Database sẽ lấy từ SQL 
+Database sẽ lấy từ K Team để đồng bộ với nội dung bài giảng của kênh
