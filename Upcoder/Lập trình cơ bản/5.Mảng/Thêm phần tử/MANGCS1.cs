@@ -2,7 +2,7 @@ using System;
 namespace MANGCS1{
     public class Program
     {
-        static void Main()
+        static void Main(string[]args)
         {
             string[] input = Console.ReadLine().Split(' ');
             int x = int.Parse(input[0]);
