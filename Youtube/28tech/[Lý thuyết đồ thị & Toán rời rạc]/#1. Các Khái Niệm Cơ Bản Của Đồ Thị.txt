@@ -1,0 +1,135 @@
+Ký hiệu chung
+Đồ thị : G 
+Cạnh : V
+Đỉnh : E 
+
+1. Đơn đồ thị vô hướng:
+   Đơn đồ thị vô hướng G = <V, E> gồm V là tập các đỉnh, 
+E là tập các cặp không có thứ tự gồm hai phần tử khác nhau 
+của V gọi là các cạnh
+
+(Đơn giản hơn: Đơn đồn thì vô hướng chỉ gồm có đỉnh và cạnh)
+
+Chú ý
+    Hai cạnh nối cùng một cặp đỉnh gọi là hai cạnh song song 
+    Cạnh uu có hai đầu mút trùng nhau gọi là một khuyên 
+
+2. Đa đồ thị vô hướng:
+    Đa đồ thị vô hướng G = <V, E>, Gồm V là tập các đỉnh, E là 
+họ các cặp "không có thứ tự" gồm hai phần tử khác nhau của V gọi là
+các cạnh. Hai cạnh e1, e2 được gọi là cạnh bội nếu chúng cùng tương ứng 
+1 cặp đỉnh 
+
+(Đơn giản hơn: Đa đồ thị vô hướng là đồ thị vô hướng gồm có cạnh song song, nhưng không có khuyên)
+
+3. Giả đồ thị vô hướng:
+    Giả đồ thị cô hướng G = <V, E> gồm V là tập các đỉnh, 
+E là họ các cặp không có thứ tự gồm hai phần tử không nhất thiết phải 
+khác nhau của V gọi là các cạnh. Cạnh e =(u, u) được gọi là khuyên
+
+(Đơn giản hơn: Giả đồ thị là đồ thị vô hướng cho phép có khuyên)
+
+4. Đơn đồ thị có hướng:
+    Đơn đồ thị có hướng  G = <V, E> gồm V là tập các đỉnh, 
+E là tập các cặp có thứ tự gồm hai phần tử V gọi là các cung 
+
+Ví dụ
+    (A)----(B) (cạnh)
+
+    (A)----->(B) (Cung)
+
+5. Đa đồ thị có hướng:
+    Đa đồ thị có hướng G = <V, E>, Gồm V là tập các đỉnh, E là 
+họ các cặp "có thứ tự" gồm hai phần tử khác nhau của V gọi là
+các cung. Hai cạnh e1, e2 tương ứng được gọi là cung lặp   
+
+6. Đỉnh kề, cạnh liên thuộc
+    Đỉnh kề: Hai đỉnh u, v được gọi là 2 đỉnh kề nếu tồn tại e (u, v)
+là cạnh của đồ thị. Ví dụ AB = (A, B), AF = (A, F)
+    Cạnh liên thuộc: Nếu cạnh e = (u, v) là cạnh của đồ thị thì cạnh 
+e được gọi là cạnh liên thuộc với 2 đỉnh u, v. Ví dụ AF là cạnh liên thuộc 
+với 2 đỉnh A, F
+
+7. Bậc của đỉnh trên đồ thị vô hướng
+    Bậc của đỉnh u trên đồ thị vô hướng là số cạnh liên thuộc với đỉnh 
+u, ký hiệu deg(u)
+    Đỉnh có bậc 0 được gọi là đỉnh cô lập. Ví dụ đỉnh I
+    Đỉnh có bậc 1 được gọi là đỉnh treo. Ví dụ đỉnh H, G
+    Đỉnh lý:Đồ thị G = <V, E> là đồ thị vô hướng có m cạnh,
+khi đó tổng số bậc của các đỉnh trên đồ thị bằng 2 lần số cạnh 
+            3 + 2  + 1 + 2 + 3 + 2 + 1 = 10 x 2
+                Đồ thị bên dưới gồm có 10 cạnh
+                                               1
+             3                                -(H)
+            (A)-            4            4  -
+           -     - - - - - (D)- - - - -(F)-
+          -      -       -   -        -   -
+        -        -   -        -     -       (G)         
+    2 (B)- - - -(C)             (E)          1          (I)
+                 3               2
+
+8. Bán bậc vào của đỉnh trên đồ thị có hướng:
+    Bán bậc ra của đỉnh u trên đồ thị có hướng là số cung 
+của đồ thị đi ra khỏi đỉnh u, ký hiệu là deg-(u). Bán bậc vào 
+của đỉnh u trên đồ thị là số cung của đồ thị đi vào đỉnh u, kí hiệu 
+deg+(u)
+    Định lý: Trên đồ thị có hướng, tổng bán bậc ra = tổng bán bậc vào 
+của các đỉnh và bằng số lượng cạnh 
+    ( 3+ 1 + 0 + 3 + 3 + 0 + 0 + 0) = (1 + 3 + 1 + 0 + 2 + 1 + 1 +1) = 10
+                                                   (0,1)
+            (3,0)                                 ->(H)
+            (A)-            (3,1)        (3,1)  -
+           -     - - - - -> (D)- - - - -> (F)-
+          -      -       -     -          -     - -> (G) 
+        <-        ->   <-        -> (E) <-          (0,1)        
+ (1,1) (B)- - - ->(C)             (0,2)             
+                (0,3)
+
+9. Đường đi:
+    Đường đi: Dãy các đỉnh (hoặc dãy các cạnh) trong đó 2 đỉnh liên tiếp 
+có cạnh nối. Độ dài đường đi là số cạnh trên đường đi.
+    Đường đi đơn: Các đỉnh trên đường đi là phân biệt 
+(A, B, C, D) là đường đi đơn 
+(A, B, C, A, D) không phải đường đi đơn 
+
+10. Chu trình 
+    Chu trình: là đường đi gồm các cạnh phân biệt có đỉnh đầu 
+trùng đỉnh cuối. Ví dụ (A, B, C, E, D) là một chu trình 
+    Chu trình đơn: Ngoại trừ đỉnh đầu vs đỉnh cuối trùng nhau 
+không còn 2 đỉnh nào giống nhau 
+Ví dụ (A, D, F) 
+(D, A, B, C , A, F, D) là một chu trình nhưng không đơn
+
+11. Liên thông 
+    Đồ thị vô hướng được gọi là liên thông nếu luôn tìm được 
+đường đi giữa 2 đỉnh bất kỳ của đồ thị 
+
+Đồ thị H                    Đồ thị G
+                                          (A)---- (B)
+    (A)----(B)                      (C)
+ (Đồ thị liên thông )                   (Đồ thị không liên thông)
+
+ 12. Thành phần liên thông
+    Thành phần liên thông: Trong trường hợp đồ thị vô hướng không liên thông,
+ nó phân rã thành các thành phần liên thông (TPLT). Như vậy đồ thị vô hướng 
+ liên thông nếu nó có số TPLT là 1.
+ Chú ý 1 đỉnh cô lập cũng là 1 TPLT
+
+ Ví dụ đồ thị G 
+ có 2 thành phần liên thông
+
+ 13. Liên thông mạnh, yếu
+    Liên thông mạnh: Đồ thị có hướng gọi là liên thông mạnh, nếu 
+giữa 2 đỉnh bất kỳ, u, v luôn có đường đi từ u tới v 
+    Liên thông yếu: Đồ thị có hướng gọi là liên thông yếu nếu 
+đồ thị vô hướng tương ứng của nó liên thông
+
+Đồ thị H                    Đồ thị G
+
+                                          (A)---->(B)
+ (A)-------->(B)                     (C)
+    <-      -
+       (C)<-
+ (Đồ thị liên thông mạnh)                   (Đồ thị liên thông yếu )
+
+ đồ thị G có 2 thành phần liên thông 
