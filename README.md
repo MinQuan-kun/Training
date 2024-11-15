@@ -1,10 +1,14 @@
-# Practice
-Luyện các ngôn ngữ như C#, Python, C++,SQL, T SQL
-Các nguồn luyện code:
+# Hi
 
-Upcoder:http://www.upcoder.xyz/
+- Trong này mình luyện các ngôn ngữ như C#, Python , C++, SQL/T SQL
+- Các nguồn luyện code : 'Upcoder', 'TDC Upcoder', 'Youtube', ..
 
-TDCUpcoder:http://tdc.upcoder.xyz/
+## Training
 
-Nguồn khác: YOUTUBE, HACKERRANK,...
+- [Upcoder](http://www.upcoder.xyz/)
+- [TDCUpcoder](http://tdc.upcoder.xyz/)
+- Nguồn khác: YOUTUBE, HACKERRANK,...
+
+## Note
+- Tìm kiếm: `Ctrl F` + `Mã bài` hoặc `Tên bài`
 
