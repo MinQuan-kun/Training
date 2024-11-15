@@ -4,6 +4,6 @@ int main()
 {
     int a ,b;
     cin >> a >> b;
-    cout << Max(a, b)
+    cout << max(a, b)
     return 0;
 }
