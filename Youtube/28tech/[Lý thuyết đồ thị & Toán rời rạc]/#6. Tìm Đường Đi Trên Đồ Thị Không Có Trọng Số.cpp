@@ -1,4 +1,4 @@
-// Tìm đường đi giữa 2 đỉnh trên đồ thị: (có hướng và cô hướng)
+// Tìm đường đi giữa 2 đỉnh trên đồ thị: (có hướng và vô hướng)
 //input
 // 10 8 1 7
 // 1 2

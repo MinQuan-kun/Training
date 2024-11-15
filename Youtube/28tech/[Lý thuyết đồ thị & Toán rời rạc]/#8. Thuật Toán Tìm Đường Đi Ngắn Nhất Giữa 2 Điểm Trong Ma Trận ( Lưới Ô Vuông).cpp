@@ -82,6 +82,7 @@ void input()
 int main()
 {
     input();
+    return 0;
 }
 // input
 //
