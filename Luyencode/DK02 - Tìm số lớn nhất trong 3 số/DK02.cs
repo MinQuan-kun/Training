@@ -1,5 +1,5 @@
 using System;
-namespace CB8
+namespace DK02
 {
     public class Program
     {
