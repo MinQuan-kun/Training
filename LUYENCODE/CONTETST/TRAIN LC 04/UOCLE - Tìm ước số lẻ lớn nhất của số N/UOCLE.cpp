@@ -1,19 +1,24 @@
-// 2/3 test case
 #include <bits/stdc++.h>
 using namespace std;
 
 long long UL(long long n) {
-    int max = 1;
-    if(n >= 2 && n <= pow(10, 6))
+    long long res = 1;
+    for(long long i = 1; i * i <= n; i++)
     {
-        for(int i = 1; i < n; i++)
-            if(n % i == 0 && i % 2 != 0)
-                max = i;
+        if(n % i == 0)
+        {
+            if(i % 2 != 0 && i != n)
+                res = max(res, i);
+            if(i != n / i && (n / i) % 2 != 0 && (n / i) != n)
+                res = max(res, n / i);
+        }
     }
-    return max;
+    return res;
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
     int n;
     cin >> n;
     while (n--) {
