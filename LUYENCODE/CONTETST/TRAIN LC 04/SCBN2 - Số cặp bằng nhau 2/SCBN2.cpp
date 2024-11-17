@@ -1,28 +1,32 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    vector<int> v;
-    int n;
+    vector<long long> v;
+    long long n;
     cin >> n;
-    int temp;
-    for(int i = 0; i < n; i++)
+    long long temp;
+    for(long long i = 0; i < n; i++)
     {
         cin >> temp;
         v.push_back(temp);
     }
-    int cnt[100] = 0;
-    for(int x: v)
-    {
-        for(int i = 0; i < v.size() - 1; i++)
-            if(x == v[i])
-                cnt[x]++;
+
+    // Map lưu số lượng xuất hiện của từng số
+    map<long long, long long> freq;
+
+    // Đếm tần suất xuất hiện của từng số
+    for (long long x : v) {
+        freq[x]++;
     }
-    int max = 0;
-    for(int k : v)
-        if(max < cnt[k])
-            max += cnt[k]
-    cout << max;
+
+    // Tính tổng số cặp
+    long long total_pairs = 0;
+    for (auto pair : freq) {
+        long long count = pair.second;
+        total_pairs += (count * (count - 1)) / 2; // Công thức tính số cặp
+    }
+
+    cout << total_pairs << endl; // Xuất tổng số cặp
     return 0;
 }
