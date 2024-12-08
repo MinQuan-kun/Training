@@ -6,7 +6,7 @@ int main() {
     getline(cin, input);
 
     vector<char> v;           
-    unordered_set<char> seen; 
+    unordered_set<char> seen; // không chứa ký tự trùng lặp
     bool spaceAdded = false; 
 
     for (char x : input) {
