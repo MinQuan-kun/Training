@@ -1,5 +1,7 @@
 Các bài tập hay nội dung học tớ học trên kênh TITV
 Link kênh:https://www.youtube.com/@TITVvn
+Link tải môi trường: https://dart.dev/get-dart/archive
+
 
 --Chú ý
 Riêng các bài 1, 2, 3, 4 là lý thuyết và cài đặt
