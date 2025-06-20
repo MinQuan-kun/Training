@@ -1,0 +1,51 @@
+// Ten bien (camelCase)
+String firstName;
+int maxCount;
+double totalPrice;
+
+// Ten ham (camelCase)
+void calculateTotal() {}
+int getUserAge() {}
+
+// Ten lop (PasscalCase)
+class UserProfile { }
+class DatabaseHelper { }
+class PaymenService { }
+
+//Tính năng Null Safety
+    + Ngăn chặn lỗ Null Dereference
+    + Phát hiện lỗi tại thời điểm biên dịch
+    + Sử dụng ? để cho phép Null
+    + Lưu ý: Hàm assert() được sử dụng để kiểm tra điều kiện trong quá trình
+    phát triển (development). Nếu điều kiện trong assert() là false, chương trình
+    sẽ ném ra lỗi và dừng lại
+
+// Kieu du lieu co the null 
+String ?ten ;
+int? SoDt;
+
+// Kieu du lieu khong the null
+String hoten = 'Quan'
+int tuoi = 25
+
+// Kiem tra null
+int? soluong;
+assert(soluong == null);
+
+// Biến final và const trong Dart
+    + Biến final chỉ được gán một lần và không thể thay đổi giá trị sau khi gán
+    + Biến const là hằng số tại thời gian biên dịch và không thể thay đổi
+
+// Bien final
+final name = 'Quan'; // Bien final
+name = 'Quan'; //Loi: khong the thay doi gia tri cua bien final
+
+//Bien const
+const int Namhientai = 2025;
+const double Pi = 3.14159;
+
+// su dung const phuc tap
+const Object i = 3;
+const list = [i as int];
+const map = {if (i is int ) i : 'int'};
+const set = {if (list is List<int>)... list};
