@@ -1,0 +1,12 @@
++ Tiền tố (Prefix)
+    + ++a: Tăng a trước khi sử dụng
+    + -a : Giảm a trước khi sử dụng
++ Hậu tố (Postfix)
+    + a++: Sử dụng a trước khi Tăng
+    + a- : sử dụng a trước khi giảm
++ Toán tử so sánh
+    ==, !=, <, >, <=, >=
++ ép kiểu
+    + as: ép kiểu
+    + is: kiểm tra kiểu
+    + is!: kiểm tra không phải kiểu
