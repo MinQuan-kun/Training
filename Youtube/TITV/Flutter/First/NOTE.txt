@@ -4,4 +4,4 @@ Link tải môi trường: https://dart.dev/get-dart/archive
 
 
 --Chú ý
-Riêng các bài 1, 2, 3, 4 là lý thuyết và cài đặt
+Riêng các bài 1, 2, 3, 4, 24, 25, 26 là lý thuyết và cài đặt
