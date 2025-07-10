@@ -4,4 +4,6 @@ Link tải môi trường: https://dart.dev/get-dart/archive
 
 
 --Chú ý
-Riêng các bài 1, 2, 3, 4, 24, 25, 26 là lý thuyết và cài đặt
+Riêng các bài 1, 2, 3, 4, 24, 25, 26, 45 là lý thuyết và cài đặt
+45 Cài đặt thư viện: https://pub.dev
+Từ bài 27 trở đi thực hành trên Android Studio
