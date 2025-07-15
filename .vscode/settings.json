@@ -10,7 +10,9 @@
         "atomic": "cpp",
         "format": "cpp",
         "list": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "ostream": "cpp",
+        "cmath": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
