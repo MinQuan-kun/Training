@@ -1,0 +1,5 @@
+Học PHP tại: https://www.youtube.com/watch?v=pWG7ajC_OVo&list=PL4cUxeGkcC9gksOX3Kd9KPo-O68ncT05o&index=1
+Link Tải XAMPP: https://www.apachefriends.org/index.html
+
+--Chú ý
+Riêng các bài 1, 2 là giới thiệu và cài đặt nên sẽ không đưa vào đây!
